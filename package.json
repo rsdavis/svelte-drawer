@@ -1,5 +1,5 @@
 {
-  "name": "svelte-drawer",
+  "name": "svelte-drawer-component",
   "version": "1.0.0",
   "svelte": "src/index.js",
   "scripts": {
@@ -19,5 +19,10 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/rsdavis/svelte-drawer"
   }
+
 }
