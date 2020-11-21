@@ -1,10 +1,12 @@
 {
-  "name": "svelte-app",
+  "name": "svelte-drawer",
   "version": "1.0.0",
+  "svelte": "src/index.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
