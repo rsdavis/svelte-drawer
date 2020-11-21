@@ -1,6 +1,8 @@
 
 # Svelte Drawer
 
+[Check out the demo](https://svelte.dev/repl/32443b9fad6447fe899a60596537db31?version=3.24.1)
+
 A Svelte component for a drawer that slides in from the side of the screen.
 
 Features:
