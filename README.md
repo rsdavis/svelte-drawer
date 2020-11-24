@@ -13,9 +13,13 @@ Features:
 
 ## Usage
 
+```bash
+npm install svelte-drawer-component
+```
+
 ```html
 <script>
-    import Drawer from 'svelte-drawer'
+    import Drawer from 'svelte-drawer-component'
     let open = false
 </script>
 
