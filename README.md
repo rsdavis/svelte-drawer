@@ -8,8 +8,8 @@ A Svelte component for a drawer that slides in from the side of the screen.
 Features:
 * CSS transitions
 * SSR Safe
-* slide in from any side
-* scroll lock when open
+* Top, right, bottom, or left placement
+* Lock body scrolling when open
 
 ## Usage
 
@@ -25,8 +25,17 @@ npm install svelte-drawer-component
 
 <button on:click={() => open = true}>Open</button>
 
-<Drawer bind:open size='600px'>
+<Drawer { open } size='600px'>
     <button on:click={() => open = false}>Close</button>
+</Drawer>
+```
+
+The open state for the drawer is handled entirely by the user. 
+This design gives the most control and flexibility over drawer functionality and styling.
+This means that if you want the drawer to close when the user clicks away, you need to listen for that event.
+
+```html
+<Drawer { open } on:clickAway={() => open = false}>
 </Drawer>
 ```
 

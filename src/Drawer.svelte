@@ -23,7 +23,6 @@
     $: scrollLock(open)
 
     function handleClickAway () {
-        open = false
         dispatch('clickAway')
     }
 
