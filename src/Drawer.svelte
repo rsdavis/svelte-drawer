@@ -14,7 +14,7 @@
     function scrollLock(open) {
         if (mounted) {
             const body = document.querySelector("body");
-            body.style = open ? "overflow: hidden;" : "overflow: auto";
+            body.style.overflow = open ? 'hidden' : 'auto'
         }
     }
 

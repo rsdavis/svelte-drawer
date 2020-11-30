@@ -1,7 +1,7 @@
 <script>
 
     import Drawer from './Drawer.svelte'
-    let open
+    let open = false
 
 </script>
 
