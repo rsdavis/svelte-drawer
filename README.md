@@ -6,10 +6,10 @@
 A Svelte component for a drawer that slides in from the side of the screen.
 
 Features:
-* css transitions
+* CSS transitions
+* SSR Safe
 * slide in from any side
 * scroll lock when open
-* darkened overlay
 
 ## Usage
 

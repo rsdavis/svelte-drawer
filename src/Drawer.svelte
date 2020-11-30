@@ -1,20 +1,30 @@
 <script>
 
+    import { onMount } from 'svelte'
+
     export let open         = false;
     export let duration     = 0.2;
     export let placement    = "left";
     export let size         = null;
 
+    let mounted = false
+
     $: style = `--duration: ${duration}s; --size: ${size}`;
 
     function scrollLock(open) {
-        if (document) {
+        if (mounted) {
             const body = document.querySelector("body");
             body.style = open ? "overflow: hidden;" : "overflow: auto";
         }
     }
 
-    $: scrollLock(open);
+    $: scrollLock(open)
+
+    onMount(() => {
+        mounted = true
+        scrollLock(open)
+    })
+
 
 </script>
 
