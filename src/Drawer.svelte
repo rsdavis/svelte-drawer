@@ -1,6 +1,7 @@
 <script>
 
     import { onMount } from 'svelte'
+    import { createEventDispatcher } from 'svelte'
 
     export let open         = false;
     export let duration     = 0.2;
@@ -8,8 +9,9 @@
     export let size         = null;
 
     let mounted = false
+    const dispatch = createEventDispatcher()
 
-    $: style = `--duration: ${duration}s; --size: ${size}`;
+    $: style = `--duration: ${duration}s; --size: ${size};`;
 
     function scrollLock(open) {
         if (mounted) {
@@ -20,17 +22,21 @@
 
     $: scrollLock(open)
 
+    function handleClickAway () {
+        open = false
+        dispatch('clickAway')
+    }
+
     onMount(() => {
         mounted = true
         scrollLock(open)
     })
 
-
 </script>
 
 <aside class="drawer" class:open {style}>
 
-    <div class="overlay" on:click={() => open = false} />
+    <div class="overlay" on:click={handleClickAway} />
 
     <div class="panel {placement}" class:size>
         <slot />
