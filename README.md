@@ -39,6 +39,26 @@ This means that if you want the drawer to close when the user clicks away, you n
 </Drawer>
 ```
 
+For custom size and transition duration, use the props. 
+Otherwise, if you want to style the drawer, then you can reach into the classes.
+
+```html
+<div class='app'>
+    <Drawer></Drawer>
+</div>
+
+<style>
+    .app :global(.drawer .overlay) {
+        background: rgba(100, 100, 100, 0.5);
+    }
+
+    .app :global(.drawer .panel) {
+        background: black;
+        color: white;
+    }
+</style>
+```
+
 ## Parameters
 
 | Parameter | Default | Description                                     |

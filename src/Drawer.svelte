@@ -56,7 +56,7 @@
     }
 
     .drawer.open {
-        z-index: 1;
+        z-index: 99;
         transition: z-index var(--duration) step-start;
     }
 
