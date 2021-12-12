@@ -8,6 +8,7 @@
     "start": "sirv public",
     "prepublishOnly": "npm run build"
   },
+  "types": "./types/index.d.ts",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -21,8 +22,7 @@
     "sirv-cli": "^1.0.0"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/rsdavis/svelte-drawer"
+    "type": "git",
+    "url": "https://github.com/rsdavis/svelte-drawer"
   }
-
 }
