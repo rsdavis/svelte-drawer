@@ -12,7 +12,7 @@ interface DrawerProps {
    * Side of the screen to slide out from.
    * @default 'left'
    */
-  placement?: 'left' | 'right';
+  placement?: 'left' | 'right' | 'top' | 'bottom';
 
   /**
    * Panel size (e.g.: `100px`, `10em`, `70%`, `null`).
